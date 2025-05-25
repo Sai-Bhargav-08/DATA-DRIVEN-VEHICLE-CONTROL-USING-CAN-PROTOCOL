@@ -104,14 +104,14 @@ void Intro() {
 	StrLCD(" V24HE5 P2'S ");
 	delay_s(2);
 	CmdLCD(CLEAR_LCD);
-	StrLCD("  VECTOR INDIA");
-	CmdLCD(GOTO_LINE2_POS0);
-	StrLCD(" DASHBOARD  HYD");
-	delay_s(2);
-	CmdLCD(CLEAR_LCD);
 	StrLCD("  CAN PROTOCOL ");
 	CmdLCD(GOTO_LINE2_POS0);
 	StrLCD(" MAJOR PROJECT");
+	delay_s(2);
+	CmdLCD(CLEAR_LCD);
+	StrLCD("  VECTOR INDIA");
+	CmdLCD(GOTO_LINE2_POS0);
+	StrLCD(" DASHBOARD  HYD");
 	delay_s(2);
 	CmdLCD(CLEAR_LCD);
 }
