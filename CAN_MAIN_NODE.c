@@ -11,7 +11,7 @@ CANF txF;
 int main() {
 	f32 temp;
 	InitLCD();
-	//Intro();   // just for attraction
+	Intro();   // just for attraction
 	Int_Enable();
 	Init_CAN1();
 	txF.ID=2;
