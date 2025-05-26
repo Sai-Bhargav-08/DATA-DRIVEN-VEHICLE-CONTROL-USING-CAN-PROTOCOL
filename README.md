@@ -90,19 +90,19 @@
 --------------------------------------------------------------------------------------------------------------
 **🔁 System Logic**
  
-Engine Temp:
+🌡️Engine Temp:
 
 > DS18B20 → LPC2129 → LCD & CAN
 > 
 > Uses parasite power mode
 
-Reverse Alert:
+🔙Reverse Alert:
 
 > Reverse switch triggers ADC read (GP2D12)
 > 
 > If distance <15 cm → Buzzer ON + LCD “WARNING”
 
-Window Display:
+🪟 Window Display:
 
 > Main Node sends 0–8 level via CAN
 > 
@@ -110,7 +110,7 @@ Window Display:
 > 
 > LCD shows matching icon (custom CGRAM)
 >
-CAN Communication:
+📶CAN Communication:
 
 > MCP2551 handles bus signaling
 > 
