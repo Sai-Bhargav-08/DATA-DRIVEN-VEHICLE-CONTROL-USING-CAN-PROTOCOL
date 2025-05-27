@@ -83,7 +83,7 @@ void get_dist(void) {
 			CmdLCD(GOTO_LINE1_POS0+7);
 			StrLCD("D:");
 			F32LCD(dis,1);
-			StrLCD(" cm");
+			StrLCD(" cm ");
 		}
 	}
 	else
