@@ -16,7 +16,7 @@ int main () {
 		DV=eAR*(1024/5);
 		if(DV==3) {
 			txF.BFV.DLC=1;
-			txF.Data[0]='E'; //Error Calculatiions sends Error frame
+			txF.Data[0]='E'; //Error Calculatiions.
 			CAN1_Tx(txF);
 			txF.BFV.DLC=4;
 		}
