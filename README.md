@@ -99,17 +99,6 @@
 > 
 > LPC2129 CAN controller manages frames
 --------------------------------------------------------------------------------------------------------------
-**✅ Testing Checklist**
-> 
-> ✅ Power on → LCD boots
-> 
-> ✅ Temp appears and changes with heat
-> 
-> ✅ Reverse + Object <15 cm → Buzzer + LCD alert
-> 
-> ✅ Send window level via CAN → LED bar & LCD update
-
---------------------------------------------------------------------------------------------------------------
 > **📚 References**
 
 > NXP LPC2129 Datasheet
