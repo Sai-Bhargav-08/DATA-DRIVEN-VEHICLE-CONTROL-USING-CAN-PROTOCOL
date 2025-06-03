@@ -74,25 +74,42 @@
 --------------------------------------------------------------------------------------------------------------
 **🔁 System Logic**
  
-🌡️Engine Temp:
+**🧭 Dashboard Node**
 
-> DS18B20 → LPC2129 → LCD & CAN
+> 🌡️ Reads engine temp via DS18B20 (1-Wire, parasite mode)
 > 
-> Uses parasite power mode
-
-🔙Reverse Alert:
-
-> Reverse switch triggers ADC read (GP2D12)
+> 📟 LCD shows temp & vehicle direction
+>
+> 🔼 SW1 / 🔽 SW2: Adjust window, send level via CAN
 > 
-> If distance <15 cm → Buzzer ON + LCD “WARNING”
-
-🪟 Window Display:
-
-> Main Node sends 0–8 level via CAN
+> >📤 Sends window level status via CAN
 > 
-> Window Node lights 0–8 LEDs
+> 🔁 SW3: Toggle direction (FWD/REV)
+>
+> 🛎️ Switches use external interrupts
+>
+>
+> 🔙 In Reverse mode:
 > 
-> LCD shows matching icon (custom CGRAM)
+> >  📥 Gets distance data from CAN (sent by Reverse Alert Node)
+>
+> > 📟 Displays obstacle distance on LCD
+>
+> > 🚨 If <15 cm: buzzer + warning symbol
+
+**🔙Reverse Alert Node**:
+
+> Continuously reads distance using GP2D12
+> 
+> Sends distance data to Dashboard Node via CAN(dis > 5cm and dis < 81cm)
+
+**🪟 Window Display Node:**
+
+> This Node receives 0–8 level via CAN
+> 
+> Window Node lights 0–8 active-low LEDs
+> 
+> Dashboard LCD displays window icon using CGRAM
 >
 📶CAN Communication:
 
