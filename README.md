@@ -36,37 +36,21 @@
 --------------------------------------------------------------------------------------------------------------
 **🛠️ Hardware Components**
 
-🎛️ LPC2129 Microcontroller
+**🎛️ LPC2129 –** ARM7 MCU with CAN support
 
-> ARM7TDMI core with dual CAN controllers (10–60 MHz operation). Handles all sensing, processing, and communication.
+**🔄 MCP2551 –** CAN transceiver (1 Mb/s)
 
-🔄 MCP2551 CAN Transceiver
+**🌡️ DS18B20 –** 1-Wire temperature sensor
 
-> ISO-11898 compliant high-speed CAN PHY. Buffers the LPC2129’s TX/RX logic to the CANH/CANL lines (1 Mb/s, fault-tolerant).
+**🔭 GP2D12 –** IR distance sensor (ADC input)
 
-🌡️ DS18B20 Temperature Sensor
+**📟 16×2 LCD –** Displays status and symbols
 
-> Digital thermometer (9–12 bit resolution) on a 1-Wire bus. Requires a 4.7 kΩ pull-up resistor and supports parasite power mode.
+**💡 LEDs (×8) –** Show window position
 
-🔭 Sharp GP2D12 IR Distance Sensor
+**🔔 Buzzer –** Reverse alert
 
-> Analog distance sensor (~10–80 cm range). Output voltage decreases with distance and is connected to LPC’s ADC input.
-
-📟 16×2 LCD Module (HD44780)
-
-> Used for real-time status display. Custom 5×8 CGRAM characters are defined to show window graphics.
-
-💡 Indicator LEDs (×8)
-
-> Active-low green LEDs used to display window position (0–8) as a bar-graph.
-
-🔔 Buzzer
-
-> Piezo sounder activated by reverse alert logic when an obstacle is detected.
-
-⚡ Power Supply & Miscellaneous
-
-> 5 V regulator for logic and sensors, 4.7 kΩ pull-up for 1-Wire, buttons for reverse gear input, and 120 Ω CAN bus terminators.
+**⚡ Power & Extras –** 5 V supply, pull-ups, switches, terminators
 
 --------------------------------------------------------------------------------------------------------------
 **💻 Software & Firmware**
