@@ -4,34 +4,16 @@
 
 --------------------------------------------------------------------------------------------------------------
 **🔧 Key Features**
+
+> 🌡️ Engine Temperature Monitoring: Utilizes the DS18B20 sensor to display real-time engine temperature on the dashboard LCD.
 > 
- 🌡️ Engine Temperature Monitoring
- 
->   DS18B20 digital sensor (1-Wire)
+> 🪟 Window Control & Display: Adjusts window levels (0–8) via dashboard switches, with status broadcasted over CAN. Visual feedback provided through 8 active-low LEDs and a custom LCD icon.
 > 
->  Real-time temperature on LCD & CAN broadcast
-
-🔙 Reverse Parking Alert
-
-> Sharp GP2D12 IR sensor (10–80 cm range)
-> 
-> Buzzer & LCD warning if object <1 cm when reversing
-
-🪟 Window Position Display
-
-> Window level (0–8) via CAN
-
- Displayed as:
-
-> Bar graph on 8 LEDs
-> 
-> Custom CGRAM icon on 16×2 LCD
-
-📶 CAN Bus Communication
-
-> MCP2551 transceiver (1 Mb/s, ISO-11898)
-> 
-> Reliable, noise-resistant 2-wire CAN network (CANH/CANL)
+> 🔁 Direction Toggle: Switch between Forward and Reverse modes using a dedicated dashboard switch, with direction status displayed on the LCD.
+>
+> 🔙 Reverse Alert: In Reverse mode, receives distance data from the Reverse Alert Node via CAN. If an obstacle is detected within 15 cm, activates a buzzer and displays a warning symbol on the LCD.
+>
+> 📶 Robust CAN Communication: Employs MCP2551 transceivers and LPC2129 controllers to ensure reliable, high-speed (1 Mb/s) communication across all nodes.
 
 --------------------------------------------------------------------------------------------------------------
 **🛠️ Hardware Components**
