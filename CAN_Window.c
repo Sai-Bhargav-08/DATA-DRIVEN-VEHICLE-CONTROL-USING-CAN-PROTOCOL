@@ -1,17 +1,20 @@
-#include <LPC21XX.H>
-#include "types.h"
+#include <LPC21xx.h>
 #include "can.h"
-#define LEDS   0             //P0.0 AL LEDS
+#include "servo.h"
+#define LEDS   1             //P0.1 AL LEDS
 // ALL LEDS ON INDICATES WINDOW IS CLOSED
+
 int main() {
 	CANF RxF;
 	Init_CAN1();
+	init_pwm();
+	set_servo(0); // Start at 0°
 	IOSET0=0xFF<<LEDS;
-	IODIR0=0xFF<<LEDS;
-	while(1) {
+	IODIR0=0xFF<<LEDS;	
+	while (1) {
 		CAN1_Rx(&RxF);
 		if(RxF.ID==2) {
-			switch((u16)RxF.Data[0]) {
+			switch(RxF.Data[0]) {
 				case 0:IOCLR0=0xFF<<LEDS;
 							IOSET0=0xFF<<LEDS;
 							break;
@@ -40,6 +43,8 @@ int main() {
 							IOSET0=0x00<<LEDS;
 							break;
 			}
+			set_servo(RxF.Data[0]);
 		}
 	}
 }
+		
