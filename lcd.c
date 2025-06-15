@@ -73,7 +73,7 @@ void F32LCD(f32 num,u8 nDp) {  // to display float values .. 1st arg Float num..
 }
 void Intro() {
 	u8 i,j;
-	u8 *ptr=(u8 *)"..INITIALIZING..THE CAN PROJECT";
+	u8 *ptr=(u8 *)"..INITIALIZING..THE CAN PROJECT ";
 	for(j=0;j<2;j++) {
 		for(i=0;i<16;i++) {
 			CharLCD(ptr[i]);
@@ -142,4 +142,3 @@ void S32LCD(s32 num) {
 	U32LCD(num);  // passing +ve num
 }
 */
-
