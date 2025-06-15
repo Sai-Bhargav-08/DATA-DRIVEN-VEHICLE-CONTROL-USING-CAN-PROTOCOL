@@ -1,7 +1,6 @@
 #include <LPC21XX.H>
 #include "ext_int.h"
 #include "lcd.h"
-#include "adc.h"
 #include "lcd__defines.h"
 #include "can.h"
 #include "can_defines.h"
@@ -11,8 +10,9 @@ extern volatile u8 cnt,Gear;
 extern CANF txF;
 void Toggle_Gear(void)__irq {
 	Gear^=1;
-	CmdLCD(0x80+5);
+	CmdLCD(GOTO_LINE1_POS0+5);
 	StrLCD("           ");
+	delay_ms(200);
 	EXTINT=1<<0;
 	VICVectAddr=0;
 }
@@ -23,6 +23,7 @@ void Window_Up(void)__irq {
 		txF.Data[0]=cnt;
 		CAN1_Tx(txF);
 	}
+	delay_ms(200);
 	EXTINT=1<<1;
 	VICVectAddr=0;
 }
