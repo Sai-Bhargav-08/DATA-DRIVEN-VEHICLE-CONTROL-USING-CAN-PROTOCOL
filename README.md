@@ -30,7 +30,7 @@
 
 **💡 LEDs (×8) –** Show window position
 
-**🔁 Tower Pro SG90 Servo Motor –** Reflects window position with 0°–180° rotation using Tower Pro SG90 servo controlled via PWM 
+**🔁 Tower Pro SG90 Servo Motor –** Reflects window position with 0°–180° rotation controlled via PWM 
 
 **🔔 Buzzer –** Reverse alert
 
