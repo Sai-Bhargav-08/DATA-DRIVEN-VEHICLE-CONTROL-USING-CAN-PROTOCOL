@@ -5,15 +5,15 @@
 --------------------------------------------------------------------------------------------------------------
 **🔧 Key Features**
 
-> 🌡️ Engine Temperature Monitoring: Utilizes the DS18B20 sensor to display real-time engine temperature on the dashboard LCD.
+> **🌡️ Engine Temperature Monitoring:** Utilizes the DS18B20 sensor to display real-time engine temperature on the dashboard LCD.
 > 
-> 🪟 Window Control & Display:: Adjusts window levels (0–8) via dashboard switches, with status broadcasted over CAN. Visual feedback provided through 8 active-low LEDs, a custom LCD icon, and a Tower Pro SG90 servo motor (0°–180°) controlled via PWM to reflect window position physically.
+> **🪟 Window Control & Display:** Adjusts window levels (0–8) via dashboard switches, with status broadcasted over CAN. Visual feedback provided through 8 active-low LEDs, a custom LCD icon, and a Tower Pro SG90 servo motor (0°–180°) controlled via PWM to reflect window position physically.
 > 
-> 🔁 Direction Toggle: Switch between Forward and Reverse modes using a dedicated dashboard switch, with direction status displayed on the LCD.
+> **🔁 Direction Toggle**: Switch between Forward and Reverse modes using a dedicated dashboard switch, with direction status displayed on the LCD.
 >
-> 🔙 Reverse Alert: In Reverse mode, receives distance data from the Reverse Alert Node via CAN. If an obstacle is detected within 15 cm, activates a buzzer and displays a warning symbol on the LCD.
+> **🔙 Reverse Alert:** In Reverse mode, receives distance data from the Reverse Alert Node via CAN. If an obstacle is detected within 15 cm, activates a buzzer and displays a warning symbol on the LCD.
 >
-> 📶 Robust CAN Communication: Employs MCP2551 transceivers and LPC2129 controllers to ensure reliable, high-speed (1 Mb/s) communication across all nodes.
+> **📶 Robust CAN Communication:** Employs MCP2551 transceivers and LPC2129 controllers to ensure reliable, high-speed (1 Mb/s) communication across all nodes.
 
 --------------------------------------------------------------------------------------------------------------
 **🛠️ Hardware Components**
