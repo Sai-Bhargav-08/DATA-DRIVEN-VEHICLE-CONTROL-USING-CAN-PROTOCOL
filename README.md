@@ -85,7 +85,7 @@
 
 **🔙Reverse Alert Node**:
 
-> Continuously reads distance using GP2D12
+> Continuously reads distance using GP2D12 via ADC
 > 
 > Sends distance data to Dashboard Node via CAN(dis > 5cm and dis < 81cm)
 
