@@ -7,7 +7,7 @@
 
 > **🌡️ Engine Temperature Monitoring:** Utilizes the DS18B20 sensor to display real-time engine temperature on the dashboard LCD.
 > 
-> **🪟 Window Control & Display:** Adjusts window levels (0–8) via dashboard switches, with status broadcasted over CAN. Visual feedback provided through 8 active-low LEDs, a custom LCD icon, and a Tower Pro SG90 servo motor (0°–180°) controlled via PWM to reflect window position physically.
+> **🪟 Window Glass Control & Display:** Adjusts window levels (0–8) via dashboard switches, with status broadcasted over CAN. Visual feedback provided through 8 active-low LEDs, a custom LCD icon, and a Tower Pro SG90 servo motor (0°–180°) controlled via PWM to reflect window position physically.
 > 
 > **🔁 Direction Toggle**: Switch between Forward and Reverse modes using a dedicated dashboard switch, with direction status displayed on the LCD.
 >
@@ -89,7 +89,7 @@
 > 
 > Sends distance data to Dashboard Node via CAN(dis > 5cm and dis < 81cm)
 
-**🪟 Window Display Node:**
+**🪟 Window Glass Control Node:**
 
 > This Node receives 0–8 level via CAN
 > 
